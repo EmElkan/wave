@@ -39,8 +39,8 @@ function beep() {
   gainNode.connect(audioCtx.destination);
 
   gainNode.gain.value = volume;
-  oscillator.frequency.value = frequency2;
-  oscillator.frequency.value = frequency1;
+  oscillator.frequency.value = range1;
+  oscillator.frequency.value = range2;
   oscillator.type = "sine";
 
   oscillator.start();
