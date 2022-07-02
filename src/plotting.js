@@ -30,6 +30,15 @@ function updateChart(xValues, yValues) {
 
 audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
+show();
+beep();
+
+function show() {
+  frequency = document.getElementById("range1In").value;
+  frequency = document.getElementById("range2In").value;
+  volume = document.getElementById("volIn").value / 100;
+
+}
 
 function beep() {
   var oscillator = audioCtx.createOscillator();
@@ -45,4 +54,3 @@ function beep() {
 
   oscillator.start();
 }
-beep()
