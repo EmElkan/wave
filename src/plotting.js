@@ -31,15 +31,10 @@ function updateChart(xValues, yValues) {
 audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 show();
-
-function show(){
+function show() {
   range1 = document.getElementById("range1").value;
-  document.getElementById("range1").innerHTML=frequency + ' Hz';
-
-
-  volume = document.getElementById("vol").value / 10;
-  document.getElementById("vol").innerHTML=volume;
-
+  vol = document.getElementById("vol").value / 100;
+  duration = document.getElementById("duration").value;
 }
 
 function beep() {
@@ -49,11 +44,13 @@ function beep() {
   oscillator.connect(gainNode);
   gainNode.connect(audioCtx.destination);
 
-  gainNode.gain.value = volume;
+  gainNode.gain.value = vol;
   oscillator.frequency.value = range1;
   // oscillator.frequency.value = range2;
   oscillator.type = "sine";
-
   oscillator.start();
-}
 
+  setTimeout(function () {
+    oscillator.stop();
+  }, duration);
+}

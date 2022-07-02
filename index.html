@@ -32,6 +32,12 @@
       type="range" class="accent" min="440" max="442" step="0.1" value="441">
     <label for="range2">441</label> Hz
   </fieldset>
+  <fieldset>
+    <legend>Duration</legend>
+    <input id="duration"
+      type="range" class="accent" min="1" max="1000">
+    <label for="duration"></label> Ms
+  </fieldset>
   <button onclick='beep();'>Play</button>
   <canvas id="chart"></canvas>
   <py-script src="src/controls.py"></py-script>
