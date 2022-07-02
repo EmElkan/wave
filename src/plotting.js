@@ -57,4 +57,3 @@ function beep() {
   oscillator.start();
 }
 
-beep();
