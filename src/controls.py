@@ -1,4 +1,4 @@
-# controls.py
+# src/controls.py
 
 import numpy as np
 from pyodide import create_proxy, to_js

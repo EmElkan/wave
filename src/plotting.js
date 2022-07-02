@@ -1,4 +1,4 @@
-plotting.js
+// src/plotting.js
 
 const chart = new Chart("chart", {
   type: "line",
