@@ -34,9 +34,9 @@ show();
 beep();
 
 function show() {
-  frequency = document.getElementById("range1In").value;
-  frequency = document.getElementById("range2In").value;
-  volume = document.getElementById("volIn").value / 100;
+  frequency = document.getElementById("range1").value;
+  frequency = document.getElementById("range2").value;
+  volume = document.getElementById("vol").value / 100;
 
 }
 
