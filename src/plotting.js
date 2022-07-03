@@ -35,6 +35,7 @@ function show() {
   range1 = document.getElementById("range1").value;
   range2 = document.getElementById("range2").value;
   vol = document.getElementById("vol").value / 100;
+  duration = document.getElementById("duration").value;
 }
 
 function beep() {
@@ -49,7 +50,7 @@ function beep() {
   oscillator.frequency.value = range2;
   oscillator.type = "sine";
   oscillator.start();
-  
+
   setTimeout(
     function(){
       oscillator.stop();
