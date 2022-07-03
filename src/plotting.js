@@ -40,20 +40,25 @@ function show() {
 
 function beep() {
   var oscillator = audioCtx.createOscillator();
+  var oscillator2 = audioCtx.createOscillator();
   var gainNode = audioCtx.createGain();
 
   oscillator.connect(gainNode);
+  oscillator2.connect(gainNode);
   gainNode.connect(audioCtx.destination);
 
   gainNode.gain.value = vol;
   oscillator.frequency.value = range1;
-  oscillator.frequency.value = range2;
+  oscillator2.frequency.value = range2;
   oscillator.type = "sine";
+  oscillator2.type = "sine";
   oscillator.start();
+  oscillator2.start();
 
   setTimeout(
     function(){
       oscillator.stop();
+      oscillator2.stop();
     }, 
     duration
   );  
