@@ -8,6 +8,7 @@ from waves import wave
 
 range1 = document.querySelector("#range1")
 range2 = document.querySelector("#range2")
+vol = document.querySelector("#vol")
 
 sampling_frequency = 800
 seconds = 1.5
@@ -28,5 +29,6 @@ def plot_waveform():
 proxy = create_proxy(on_range_update)
 range1.addEventListener("input", proxy)
 range2.addEventListener("input", proxy)
+vol.addEventListener("input", proxy)
 
 plot_waveform()

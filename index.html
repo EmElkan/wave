@@ -27,6 +27,7 @@
         value="10"
         oninput="show()"
       />
+      <label for="vol">10</label> %
     </fieldset>
     <fieldset>
       <legend>Frequency<sub>1</sub></legend>
@@ -56,18 +57,19 @@
       />
       <label for="range2">440</label> Hz
     </fieldset>
-    <!-- <fieldset>
+    <fieldset>
       <legend>Duration</legend>
       <input
         id="duration"
         type="range"
         class="accent"
         min="1"
-        max="1000"
+        max="5000"
         oninput="show()"
+        value="100"
       />
-      <label for="duration"></label> Ms
-    </fieldset> -->
+      <label for="duration">100</label> Ms
+    </fieldset>
     <button onclick="beep();">Play</button>
     <canvas id="chart"></canvas>
     <py-script src="src/controls.py"></py-script>

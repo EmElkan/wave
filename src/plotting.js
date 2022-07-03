@@ -49,4 +49,11 @@ function beep() {
   oscillator.frequency.value = range2;
   oscillator.type = "sine";
   oscillator.start();
+  
+  setTimeout(
+    function(){
+      oscillator.stop();
+    }, 
+    duration
+  );  
 };
