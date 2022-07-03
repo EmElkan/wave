@@ -33,7 +33,7 @@ audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 show();
 function show() {
   range1 = document.getElementById("range1").value;
-  vol = document.getElementById("vol").value / 100;
+  vol = document.getElementById("vol").value;
   duration = document.getElementById("duration").value;
 }
 
@@ -46,11 +46,7 @@ function beep() {
 
   gainNode.gain.value = vol;
   oscillator.frequency.value = range1;
-  // oscillator.frequency.value = range2;
+  oscillator.frequency.value = range2;
   oscillator.type = "sine";
   oscillator.start();
-
-  setTimeout(function () {
-    oscillator.stop();
-  }, duration);
 }
